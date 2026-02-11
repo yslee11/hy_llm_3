@@ -34,10 +34,10 @@
 
       <h3>평가 항목</h3>
       <ul>
-        <li><b>① 안전성 (Safe)</b> : 해당 장소가 얼마나 안전해 보이는가?</li>
+        <li><b>① 안전함 (Safe)</b> : 해당 장소가 얼마나 안전해 보이는가?</li>
         <li><b>② 활기참 (Lively)</b> : 해당 장소가 얼마나 활기차고 생동감 있는가?</li>
         <li><b>③ 아름다움 (Beautiful)</b> : 해당 장소가 미관상 얼마나 아름다운가?</li>
-        <li><b>④ 부유함 (Wealthy)</b> : 해당 장소가 얼마나 부유한 동네로 보이는가?</li>
+        <li><b>④ 부유함 (Wealthy)</b> : 해당 장소의 관리가 잘 되어 있다고 느껴지는가?</li>
         <li><b>⑤ 지루함 (Boring)</b> : 해당 장소가 얼마나 단조롭고 지루한가?</li>
         <li><b>⑥ 우울함 (Depressing)</b> : 해당 장소가 얼마나 우울하고 삭막한가?</li>
       </ul>
@@ -83,9 +83,9 @@
 
   <!-- 설문 페이지 -->
   <section id="survey-page" class="page">
-    <h2>이미지를 보고 교통사고 위험 수준을 평가해주세요</h2>
-    <p class="subtext">0 = 매우 위험하다 / 5 = 매우 안전하다</p>
-    <p class="subtext">※ 보행자 시설, 보행 공간, 차량 통행, 교통 표지 등만 고려</p>
+    <h2>이미지를 보고 보행환경 수준을 평가해주세요</h2>
+    <p class="subtext">1 = 매우 그렇지 않다 / 5 = 매우 그렇다</p>
+    <p class="subtext">※ 보행자 시설, 보행 공간, 차량 통행량, 녹지 등을 고려</p>
     
     <div id="progress"></div>
     <div id="loading">이미지 불러오는 중...</div>
@@ -94,68 +94,68 @@
     <form id="score-form">
 
       <div class="metric">
-        <p>① 아름다움 </p>
+        <p>① 안전함(Safety): 해당 가로경관은 안전해보이시나요? </p>
         <div class="scale">
-          <label><input type="radio" name="beauty" value="1">1</label>
-          <label><input type="radio" name="beauty" value="2">2</label>
-          <label><input type="radio" name="beauty" value="3">3</label>
-          <label><input type="radio" name="beauty" value="4">4</label>
-          <label><input type="radio" name="beauty" value="5">5</label>
+          <label><input type="radio" name="Safety" value="1">1</label>
+          <label><input type="radio" name="Safety" value="2">2</label>
+          <label><input type="radio" name="Safety" value="3">3</label>
+          <label><input type="radio" name="Safety" value="4">4</label>
+          <label><input type="radio" name="Safety" value="5">5</label>
         </div>
       </div>
     
       <div class="metric">
-        <p>② 매력있는 </p>
+        <p>② 활기참(Lively): 해당 가로경관은 활기차고 생동감 있어보이시나요? </p>
         <div class="scale">
-          <label><input type="radio" name="attractivity" value="1">1</label>
-          <label><input type="radio" name="attractivity" value="2">2</label>
-          <label><input type="radio" name="attractivity" value="3">3</label>
-          <label><input type="radio" name="attractivity" value="4">4</label>
-          <label><input type="radio" name="attractivity" value="5">5</label>
+          <label><input type="radio" name="Lively" value="1">1</label>
+          <label><input type="radio" name="Lively" value="2">2</label>
+          <label><input type="radio" name="Lively" value="3">3</label>
+          <label><input type="radio" name="Lively" value="4">4</label>
+          <label><input type="radio" name="Lively" value="5">5</label>
         </div>
       </div>
 
       <div class="metric">
-        <p>③ 활력있는 </p>
+        <p>③ 아름다움(Beauty): 해당 가로경관은 미관상 아름다워보이시나요? </p>
         <div class="scale">
-          <label><input type="radio" name="liveliness" value="1">1</label>
-          <label><input type="radio" name="liveliness" value="2">2</label>
-          <label><input type="radio" name="liveliness" value="3">3</label>
-          <label><input type="radio" name="liveliness" value="4">4</label>
-          <label><input type="radio" name="liveliness" value="5">5</label>
+          <label><input type="radio" name="Beauty" value="1">1</label>
+          <label><input type="radio" name="Beauty" value="2">2</label>
+          <label><input type="radio" name="lBeauty" value="3">3</label>
+          <label><input type="radio" name="Beauty" value="4">4</label>
+          <label><input type="radio" name="Beauty" value="5">5</label>
         </div>
       </div>
 
       <div class="metric">
-        <p>④ 걷기 편한</p>
+        <p>④ 부유함(Wealthy): 해당 가로경관은 관리가 잘 되어 있다고 느껴지나요?</p>
         <div class="scale">
-          <label><input type="radio" name="walkability" value="1">1</label>
-          <label><input type="radio" name="walkability" value="2">2</label>
-          <label><input type="radio" name="walkability" value="3">3</label>
-          <label><input type="radio" name="walkability" value="4">4</label>
-          <label><input type="radio" name="walkability" value="5">5</label>
+          <label><input type="radio" name="Wealthy" value="1">1</label>
+          <label><input type="radio" name="Wealthy" value="2">2</label>
+          <label><input type="radio" name="Wealthy" value="3">3</label>
+          <label><input type="radio" name="Wealthy" value="4">4</label>
+          <label><input type="radio" name="Wealthy" value="5">5</label>
         </div>
       </div>
       
       <div class="metric">
-        <p>⑤ 안전한 </p>
+        <p>⑤ 지루함(Boring): 해당 가로경관은 단조롭고 지루하게 보이나요? </p>
         <div class="scale">
-          <label><input type="radio" name="safety" value="1">1</label>
-          <label><input type="radio" name="safety" value="2">2</label>
-          <label><input type="radio" name="safety" value="3">3</label>
-          <label><input type="radio" name="safety" value="4">4</label>
-          <label><input type="radio" name="safety" value="5">5</label>
+          <label><input type="radio" name="Boring" value="1">1</label>
+          <label><input type="radio" name="Boring" value="2">2</label>
+          <label><input type="radio" name="Boring" value="3">3</label>
+          <label><input type="radio" name="Boring" value="4">4</label>
+          <label><input type="radio" name="Boring" value="5">5</label>
         </div>
       </div>
       
       <div class="metric">
-        <p>⑥ 편안한 </p>
+        <p>⑥ 우울함(Depression): 해당 가로경관은 우울하고 삭막해보이시나요? </p>
         <div class="scale">
-          <label><input type="radio" name="comfort" value="1">1</label>
-          <label><input type="radio" name="comfort" value="2">2</label>
-          <label><input type="radio" name="comfort" value="3">3</label>
-          <label><input type="radio" name="comfort" value="4">4</label>
-          <label><input type="radio" name="comfort" value="5">5</label>
+          <label><input type="radio" name="Depression" value="1">1</label>
+          <label><input type="radio" name="Depression" value="2">2</label>
+          <label><input type="radio" name="Depression" value="3">3</label>
+          <label><input type="radio" name="Depression" value="4">4</label>
+          <label><input type="radio" name="Depression" value="5">5</label>
         </div>
       </div>
 
