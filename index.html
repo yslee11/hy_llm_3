@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>보행환경 인식 조사</title>
+  
+  <!-- Favicon 추가 (404 오류 해결) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚶</text></svg>">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 표지 페이지 -->
+  <section id="intro-page" class="page active">
+    <h1 class="title">보행환경 인식 조사</h1>
+
+    <p class="intro-text">
+      안녕하세요. 본 설문은 <b>한양대학교 도시공학과 도시설계 및 공간분석 연구실</b>에서 
+      서울시 보행환경에 대한 <b>가로 보행 환경 인식</b>을 평가하기 위해 진행됩니다.
+    </p>
+
+    <div class="guide-box">
+      <h3>평가 방법</h3>
+      <ul>
+        <li>● 제시되는 사진을 보고 "이 장소에서 보행할 때 느끼는 <b>보행환경 수준</b>"을 1-5점으로 평가합니다.</li>
+        <li>● <b>1점 = 매우 위험하다</b>, <b>5점 = 매우 안전하다</b></li>
+        <li>● 고려 대상: 보행자 시설, 보행 공간, 차량 통행량, 교통 표지·노면 표시 등 <b>교통사고 관련 요인</b></li>
+        <li>○ <span class="exclude">※ 범죄·치안 요인은 평가에서 제외합니다.</span></li>
+      </ul>
+    </div>
+
+    <div class="form-section">
+      <h3>기본 정보</h3>
+      <div class="form-group">
+        <label>성별:</label>
+        <label><input type="radio" name="gender" value="남"> 남</label>
+        <label><input type="radio" name="gender" value="여"> 여</label>
+      </div>
+      <div class="form-group">
+        <label>연령대:</label>
+        <select name="age" id="age">
+          <option value="">선택해 주세요</option>
+          <option value="10대">10대</option>
+          <option value="20대">20대</option>
+          <option value="30대">30대</option>
+          <option value="40대">40대</option>
+          <option value="50대">50대</option>
+          <option value="60대">60대 이상</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>직업:</label>
+        <select name="job" id="job">
+          <option value="">선택해 주세요</option>
+          <option value="학생">학생</option>
+          <option value="직장인">직장인 (사무·전문직)</option>
+          <option value="자영업자">자영업자·상인</option>
+          <option value="서비스직">서비스·현장직 종사자</option>
+          <option value="주부">주부</option>
+          <option value="무직">무직/은퇴</option>
+          <option value="기타">기타</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="startBtn" class="start-btn">설문 시작</button>
+  </section>
+
+  <!-- 설문 페이지 -->
+  <section id="survey-page" class="page">
+    <h2>이미지를 보고 교통사고 위험 수준을 평가해주세요</h2>
+    <p class="subtext">0 = 매우 위험하다 / 5 = 매우 안전하다</p>
+    <p class="subtext">※ 보행자 시설, 보행 공간, 차량 통행, 교통 표지 등만 고려</p>
+    
+    <div id="progress"></div>
+    <div id="loading">이미지 불러오는 중...</div>
+    <img id="survey-image" alt="보행환경 이미지" class="survey-img" />
+    
+    <form id="score-form">
+
+      <div class="metric">
+        <p>① 아름다움 </p>
+        <div class="scale">
+          <label><input type="radio" name="beauty" value="1">1</label>
+          <label><input type="radio" name="beauty" value="2">2</label>
+          <label><input type="radio" name="beauty" value="3">3</label>
+          <label><input type="radio" name="beauty" value="4">4</label>
+          <label><input type="radio" name="beauty" value="5">5</label>
+        </div>
+      </div>
+    
+      <div class="metric">
+        <p>② 매력있는 </p>
+        <div class="scale">
+          <label><input type="radio" name="attractivity" value="1">1</label>
+          <label><input type="radio" name="attractivity" value="2">2</label>
+          <label><input type="radio" name="attractivity" value="3">3</label>
+          <label><input type="radio" name="attractivity" value="4">4</label>
+          <label><input type="radio" name="attractivity" value="5">5</label>
+        </div>
+      </div>
+
+      <div class="metric">
+        <p>③ 활력있는 </p>
+        <div class="scale">
+          <label><input type="radio" name="liveliness" value="1">1</label>
+          <label><input type="radio" name="liveliness" value="2">2</label>
+          <label><input type="radio" name="liveliness" value="3">3</label>
+          <label><input type="radio" name="liveliness" value="4">4</label>
+          <label><input type="radio" name="liveliness" value="5">5</label>
+        </div>
+      </div>
+
+      <div class="metric">
+        <p>④ 걷기 편한</p>
+        <div class="scale">
+          <label><input type="radio" name="walkability" value="1">1</label>
+          <label><input type="radio" name="walkability" value="2">2</label>
+          <label><input type="radio" name="walkability" value="3">3</label>
+          <label><input type="radio" name="walkability" value="4">4</label>
+          <label><input type="radio" name="walkability" value="5">5</label>
+        </div>
+      </div>
+      
+      <div class="metric">
+        <p>⑤ 안전한 </p>
+        <div class="scale">
+          <label><input type="radio" name="safety" value="1">1</label>
+          <label><input type="radio" name="safety" value="2">2</label>
+          <label><input type="radio" name="safety" value="3">3</label>
+          <label><input type="radio" name="safety" value="4">4</label>
+          <label><input type="radio" name="safety" value="5">5</label>
+        </div>
+      </div>
+      
+      <div class="metric">
+        <p>⑥ 편안한 </p>
+        <div class="scale">
+          <label><input type="radio" name="comfort" value="1">1</label>
+          <label><input type="radio" name="comfort" value="2">2</label>
+          <label><input type="radio" name="comfort" value="3">3</label>
+          <label><input type="radio" name="comfort" value="4">4</label>
+          <label><input type="radio" name="comfort" value="5">5</label>
+        </div>
+      </div>
+
+    </form>
+    <div class="buttons">
+      <button type="button" id="prevBtn">이전</button>
+      <button type="button" id="nextBtn">다음</button>
+    </div>
+  </section>
+
+  <!-- 완료 페이지 -->
+  <section id="end-page" class="page">
+    <h2>참여해 주셔서 감사합니다!</h2>
+    <p>응답이 성공적으로 기록되었습니다.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

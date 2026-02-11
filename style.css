@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  color: #333;
+}
+
+.page { display: none; }
+.page.active { display: block; }
+
+/* 표지 스타일 */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  max-width: 650px;
+  margin: 0 auto 25px auto;
+  line-height: 1.6;
+}
+
+.guide-box {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  text-align: left;
+}
+
+.guide-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.guide-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guide-box li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.exclude {
+  color: #b30000;
+  font-weight: bold;
+}
+
+.form-section {
+  margin: 25px auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+select {
+  padding: 6px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.start-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  background: #0077cc;
+  color: white;
+  cursor: pointer;
+}
+.start-btn:hover {
+  background: #005fa3;
+}
+
+/* 설문 페이지 */
+.survey-img {
+  max-width: 90%;
+  max-height: 70vh;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.scale { margin: 20px 0; }
+.scale label { margin: 0 8px; cursor: pointer; }
+
+.buttons { margin-top: 20px; }
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#loading {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+  display: none;
+}
