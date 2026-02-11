@@ -41,7 +41,7 @@ function setGroupOffset(group, value) {
 
 //점수 수집 함수
 function getScores() {
-  const metrics = ["beauty", "attractivity", "liveliness", "walkability", "safety", "comfort"];
+  const metrics = ["Safety", "Lively", "Beauty", "Wealthy", "Boring", "Depression"];
   const scores = {};
 
   for (const m of metrics) {
