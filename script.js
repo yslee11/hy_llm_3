@@ -2,18 +2,18 @@
 // 깃허브 저장소 정보 입력
 const GITHUB = {
   owner: "yslee11",      // ✅ 본인 깃허브 ID
-  repo: "hy_llm_1",       // ✅ 저장소 이름
+  repo: "hy_llm_3",       // ✅ 저장소 이름
   branch: "main",               // ✅ 브랜치 (보통 main)
   path: "images"                // ✅ 이미지 폴더 이름
 };
 
 // Google Apps Script Web App URL 입력
 // ✅ Apps Script 코드를 수정한 후 새 배포 URL을 여기에 붙여넣으세요.
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzqfLee-zKl4CMZhAzPA1pYPXxjYcjSphU1ix2Tbn6AwXkMFKk5hkEwZlkZKJYlFZAJ/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwyVxkW79pWXgs2Qne9XyDeMskBzz2IEs5XoMvCpvctUraC1k4Or61pZ_XxQdgEEqPkxg/exec";
 
 /*****************************************************/
 
-const SAMPLE_SIZE = 5;
+const SAMPLE_SIZE = 12;
 let currentImage = 0;
 let responses = [];
 let participant = { gender: "", age: "", job: "" };
