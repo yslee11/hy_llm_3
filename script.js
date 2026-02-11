@@ -41,7 +41,7 @@ function setGroupOffset(group, value) {
 
 //점수 수집 함수
 function getScores() {
-  const metrics = ["Safety", "Lively", "Beauty", "Wealthy", "Boring", "Depression"];
+  const metrics = ["safety", "lively", "beauty", "wealthy", "boring", "depression"];
   const scores = {};
 
   for (const m of metrics) {
@@ -199,12 +199,12 @@ async function nextQuestion() {
     timestamp: new Date().toISOString(),
     imageID: getImageID(selectedImages[currentImage]),
     group: getGroupFolder(participant.gender, participant.age),
-    beauty: scores.beauty,
-    attractivity: scores.attractivity,
-    liveliness: scores.liveliness,
-    walkability: scores.walkability,
-    safety: scores.safety,
-    comfort: scores.comfort
+    beauty: scores.safety,
+    attractivity: scores.lively,
+    liveliness: scores.beauty,
+    walkability: scores.wealthy,
+    safety: scores.boring,
+    comfort: scores.depression
   });
 
   if (currentImage >= selectedImages.length - 1) {
