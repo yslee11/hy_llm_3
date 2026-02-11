@@ -199,12 +199,12 @@ async function nextQuestion() {
     timestamp: new Date().toISOString(),
     imageID: getImageID(selectedImages[currentImage]),
     group: getGroupFolder(participant.gender, participant.age),
-    beauty: scores.safety,
-    attractivity: scores.lively,
-    liveliness: scores.beauty,
-    walkability: scores.wealthy,
-    safety: scores.boring,
-    comfort: scores.depression
+    safety: scores.safety,
+    lively: scores.lively,
+    beauty: scores.beauty,
+    wealthy: scores.wealthy,
+    boring: scores.boring,
+    depression: scores.depression
   });
 
   if (currentImage >= selectedImages.length - 1) {
