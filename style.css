@@ -94,8 +94,16 @@ select {
   object-fit: contain;
 }
 
-.scale { margin: 20px 0; }
-.scale label { margin: 0 8px; cursor: pointer; }
+.scale {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8%;
+}
+.scale label {
+  width: 20%;
+  text-align: center;
+  margin: 0;
+}
 
 .buttons { margin-top: 20px; }
 
@@ -113,13 +121,13 @@ button {
 }
 
 
+/* Likert 라벨 */
 .likert-labels {
   display: flex;
   justify-content: space-between;
+  padding: 0 8%;
   font-size: 13px;
   color: #444;
-  margin-bottom: 5px;
-  padding: 0 5%;
   text-align: center;
 }
 
