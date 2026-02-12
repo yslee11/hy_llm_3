@@ -84,6 +84,9 @@
   <!-- 설문 페이지 -->
   <section id="survey-page" class="page">
     <h2>이미지를 보고 보행환경 수준을 평가해주세요</h2>
+    <p style="color:#b30000; font-weight:600;">
+    *이미지 로딩이 느릴 수 있습니다. 잠시만 기다려주세요.
+    </p>
     <p class="subtext">1 = 매우 그렇지 않다 / 5 = 매우 그렇다</p>
     <p class="subtext">※ 보행자 시설, 보행 공간, 차량 통행량, 녹지 등을 고려</p>
     
@@ -94,7 +97,10 @@
     <form id="score-form">
 
       <div class="metric">
-        <p>① 안전함(Safety): 해당 가로경관은 안전해보이시나요? </p>
+        <p>① 안전함(Safety): 해당 거리를 밤이나 낮에 혼자 걸을 때 범죄나 사고로부터 안전하다고 느껴지나요? </p>
+        <p class="metric-desc">
+          평가 포인트: 가로등 유무, CCTV 존재 여부, 막힌 골목인지 여부, 주변의 시선(상점 등)이 확보되는지.
+        </p>
         <div class="scale">
           <label><input type="radio" name="safety" value="1">1</label>
           <label><input type="radio" name="safety" value="2">2</label>
