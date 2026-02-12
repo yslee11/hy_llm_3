@@ -111,3 +111,18 @@ button {
   margin: 10px 0;
   display: none;
 }
+
+
+.likert-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 5px;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.likert-labels span {
+  width: 20%;
+}
