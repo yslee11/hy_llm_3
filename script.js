@@ -8,7 +8,7 @@ const GITHUB = {
 
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx0fGdRs8rhHW4PZo-sHWeqkohqY3QuKZ9qqAhU_0DycABbYKYCwy1iMPKR-WvSfIdMUA/exec";
 
-const SAMPLE_SIZE = 12;
+const SAMPLE_SIZE = 10;
 
 /*****************************************************/
 
