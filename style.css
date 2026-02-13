@@ -134,3 +134,15 @@ button {
 .likert-labels span {
   width: 20%;
 }
+
+
+
+
+
+.metric p:first-child {
+  margin-bottom: 0;
+}
+
+.metric-desc {
+  margin-top: 0;
+}
