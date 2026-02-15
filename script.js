@@ -6,7 +6,7 @@ const GITHUB = {
   path: "images"
 };
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxpiFv6B-rnyKlo8VBGItb116--VedbghD__fEe4ndb9neOL3B3815Rvclgx0cSGaAxbg/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwjZ0vdkhHCrk-DAFdc6CbieG_FOYn2XRkrL8-FqINBdS3FLup-Yi-AbV7ly2Z46QJOAg/exec";
 
 const SAMPLE_SIZE = 10;
 
